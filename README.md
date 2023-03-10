@@ -76,6 +76,10 @@ El flujo de la aplicación es el siguiente:
 - El usuario puede ver las citas agendadas y cancelar citas existentes.
 - El usuario puede agregar nuevos clientes y mascotas.
 
+# Video Funcionamiento 
+
+[![Alt text](https://img.youtube.com/vi/wAF4OmJd-Ug/0.jpg)](https://www.youtube.com/watch?v=wAF4OmJd-Ug)
+
 ## Conclusiones
 
 Este proyecto es una aplicación web completa para la gestión de citas y clientes en una veterinaria. Gracias a Laravel y otras tecnologías utilizadas, la aplicación es robusta y escalable.
