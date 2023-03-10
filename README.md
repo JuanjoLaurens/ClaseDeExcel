@@ -1,64 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Veterinaria
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto es una aplicación web desarrollada en Laravel que permite programar y gestionar citas en una clínica veterinaria. La aplicación utiliza MySQL como base de datos, Bootstrap y JavaScript para el diseño y FullCalendar para mostrar las citas programadas.
 
-## About Laravel
+## Requisitos previos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Antes de instalar el proyecto, asegúrate de tener los siguientes requisitos previos instalados en tu máquina:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- PHP (versión 7.3 o superior)
+- MySQL (versión 5.7 o superior)
+- Composer (versión 2.0 o superior)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Instalación
 
-## Learning Laravel
+Para instalar el proyecto, sigue estos pasos:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clona este repositorio en tu máquina local: https://github.com/JuanjoLaurens/ClaseDeExcel.git
+2. Navega al directorio del proyecto:
+cd veterinaria
+3. Crea una copia del archivo `.env.example` y renómbralo a `.env`:
+4. Actualiza el archivo `.env` con los detalles de la base de datos:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+##### DB_CONNECTION=mysql
+##### DB_HOST=127.0.0.1
+##### DB_PORT=3306
+##### DB_DATABASE=veterinaria
+##### DB_USERNAME=usuario
+##### DB_PASSWORD=contraseña
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Asegúrate de reemplazar `usuario` y `contraseña` con tus propias credenciales de MySQL.
 
-### Premium Partners
+5. Instala las dependencias del proyecto a través de Composer:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+composer install
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Ejecuta las migraciones para crear las tablas de la base de datos:
 
-## Code of Conduct
+php artisan migrate
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+7. Inicia el servidor web de Laravel con el siguiente comando:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+php artisan serve
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. Accede al proyecto en tu navegador web en la dirección `http://localhost:8000`.
+
+Si el comando `php artisan serve` no funciona, puedes usar el siguiente comando:
+
+php -S localhost:8888 -t public
+
+
+Este comando iniciará un servidor web de PHP que servirá los archivos en el directorio `public` del proyecto en el puerto `8888`.
+
+## Funcionalidades del proyecto
+
+Este proyecto es una aplicación web para una veterinaria, donde se pueden agendar citas con los veterinarios, ver las citas agendadas, agregar nuevos clientes y mascotas.
+
+La aplicación fue desarrollada utilizando el framework Laravel, y se utilizó MySQL como base de datos. También se usaron tecnologías como Bootstrap y JavaScript para el frontend, y FullCalendar para mostrar el calendario de citas.
+
+## Funcionalidades Principales
+
+- Agendar citas con los veterinarios
+- Ver las citas agendadas
+- Agregar nuevos clientes y mascotas
+
+
+## Flujo de la aplicación
+El flujo de la aplicación es el siguiente:
+
+- El usuario puede ver el calendario de citas y agregar nuevas citas.
+- El usuario puede ver las citas agendadas y cancelar citas existentes.
+- El usuario puede agregar nuevos clientes y mascotas.
+
+## Conclusiones
+
+Este proyecto es una aplicación web completa para la gestión de citas y clientes en una veterinaria. Gracias a Laravel y otras tecnologías utilizadas, la aplicación es robusta y escalable.
