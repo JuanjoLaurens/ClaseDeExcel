@@ -18,7 +18,7 @@ Para instalar el proyecto, sigue estos pasos:
 
 1. Clona este repositorio en tu máquina local: https://github.com/JuanjoLaurens/ClaseDeExcel.git
 2. Navega al directorio del proyecto:
-cd veterinaria
+cd ClaseDeExcel
 3. Crea una copia del archivo `.env.example` y renómbralo a `.env`:
 4. Actualiza el archivo `.env` con los detalles de la base de datos:
 
